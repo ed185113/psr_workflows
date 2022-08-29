@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+name: Hello World
+
+jobs:
+
+# message -------------------------------
+  message:
+    name: Send some message 🏷️
+    runs-on: ubuntu-latest
+    steps:
+    -
+      name: Checkout
+      uses: actions/checkout@v2
+    -
+      name: Create message
+      run: |
+        echo "HELLO WORLD"
